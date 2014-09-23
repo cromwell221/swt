@@ -150,21 +150,6 @@ function init() {
 
 		el.insertAdjacentHTML('afterBegin', createBlock('Steam Web Tools', links));
 
-		// ajax add to cart
-		window.addToCart = function(subid){
-			var form = window.$J('[name="add_to_cart_'+subid+'"]');
-			var el = form.parent().find('.game_purchase_action_bg .btn_addtocart_content');
-			el.text('Wait...');
-			window.$J.ajax( {
-				url: form.attr('action'),
-				type: 'POST',
-				data: {subid:subid, action:'add_to_cart', sessionid:window.g_sessionID}
-			} ).done( function ( data ) {
-				el.css('background-image','none').text('✔ Added').attr('href','/cart/');
-			} )
-
-		};
-
 	} else {
 		window.$J('a.linkbar[href^="http://store.steampowered.com/search/?specials=1"]').after('<a class="linkbar" href="http://steamdb.info/sales/">All Specials - SteamDB.Info</a>');
 	}
