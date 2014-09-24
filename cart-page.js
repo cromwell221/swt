@@ -9,7 +9,7 @@ function init() {
 
 	var $ = window.$J; // jQuery
 
-	var el = document.querySelector('#main_content > .rightcol');
+	var el = document.querySelector('.page_content > .rightcol');
 
 	links = [
 		{href:'javascript:document.cookie=\'shoppingCartGID=0; path=/\';location.href=\'/cart/\';', text:'Очистить Корзину'},
