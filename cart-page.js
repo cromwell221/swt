@@ -40,7 +40,7 @@ function createBlock(title, links){
 	for (var i=0; i < links.length; i++) {
 		link = links[i];
 		out+='<a class="linkbar" href="'+link.href+'"'+(link.blank ? ' target="_blank"':'')+'><div class="rightblock">\
-</div>'+link.text+'</a>'
+</div>'+link.text+'</a><br />'
 	}
 
 	out+='Добавить SubID\'ы в корзину: <form id="addtocartsubids" method="post"><input type="hidden" name="action" value="add_to_cart"><input type="text" name="subids" placeholder="1, 2, 3"/><input type="submit" value="Добавить"></form></div></div></div>';
