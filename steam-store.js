@@ -25,7 +25,7 @@ function init() {
 		<span class="pulldown" id="cc_menu_btn" onclick="ShowMenu(this, \'cc_menu\', \'left\');">CC'+(curCC ?': <img src="http://cdn.steamcommunity.com/public/images/countryflags/'+curCC.toLowerCase()+'.gif" /> '+curCC:'')+' </span>\
 <div class="popup_block_new" id="cc_menu" style="display:none;">\
 <div class="popup_body popup_menu shadow_content" id="cc_list"></div></div>\
-	<div class="popup_block" id="cc_list_edit" style="display:none;">\
+	<div class="popup_block_new" id="cc_list_edit" style="display:none;">\
 	<div class="popup_body popup_menu shadow_content">\
 	<input id="ccListEdit" type="text" value="'+_cc.curList+'"/><br/><a title="OK" href="#" id="cc_okbtn">[OK]</a> <a title="Default" href="#" id="cc_defbtn">[D]</a>\
 	</div></div>';
