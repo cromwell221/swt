@@ -22,8 +22,8 @@ function init() {
 		}
 		var changeCCmenuHTML = '\
 		<style>#cc_menu_btn{min-width:59px;z-index:999;position:fixed;right:0;top:0;background-color:#000;opacity:0.5;}#cc_menu_btn:hover{opacity:1}#cc_list .popup_menu_item{white-space:nowrap}</style>\
-		<span class="pulldown" id="cc_menu_btn" onclick="ShowMenu(this, \'cc_menu\', \'left\', \'bottom\', true);">CC'+(curCC ?': <img src="http://cdn.steamcommunity.com/public/images/countryflags/'+curCC.toLowerCase()+'.gif" /> '+curCC:'')+' </span>\
-<div class="popup_block" id="cc_menu" style="display:none;">\
+		<span class="pulldown" id="cc_menu_btn" onclick="ShowMenu(this, \'cc_menu\', \'left\');">CC'+(curCC ?': <img src="http://cdn.steamcommunity.com/public/images/countryflags/'+curCC.toLowerCase()+'.gif" /> '+curCC:'')+' </span>\
+<div class="popup_block_new" id="cc_menu" style="display:none;">\
 <div class="popup_body popup_menu shadow_content" id="cc_list"></div></div>\
 	<div class="popup_block" id="cc_list_edit" style="display:none;">\
 	<div class="popup_body popup_menu shadow_content">\
