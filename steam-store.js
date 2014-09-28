@@ -207,7 +207,7 @@ function createBlock(title, links){
 	var link;
 	for (var i=0; i < links.length; i++) {
 		link = links[i];
-		out+='<a class="linkbar" href="'+link.href+'" target="_blank"><div class="rightblock">\
+		out+='<a class="linkbar" href="'+link.href+'" target="_blank"><div class="rightblock" style="display:inline;margin-right:5px">\
 <img src="'+link.icon+'" width="16" height="16" border="0" align="top"></div>'+link.text+'</a>'
 	}
 
