@@ -243,7 +243,7 @@ function inventoryPageInit(){
 					item.descriptions = [];
 
 				item.descriptions.push({value:'ClassID = '+item.classid});
-				item.descriptions.push({value:'<a href="#" onclick="getSubid(event.target,\''+item.id+'\');return false">Получить SubscriptionID</a>'});
+				item.descriptions.push({value:'<div id="subidLink"><a href="#" onclick="getSubid(event.target,\''+item.id+'\');return false">Получить SubscriptionID</a></div>'});
 
 				if(!ajaxTarget.descriptions[item.classid])
 					ajaxTarget.descriptions[item.classid] = item.descriptions;
