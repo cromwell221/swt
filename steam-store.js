@@ -21,7 +21,7 @@ function init() {
 			curCC = curCC[1];
 		}
 		var changeCCmenuHTML = '\
-		<style>#cc_menu_btn{min-width:59px;padding:0 5px;z-index:999;background-color:#000;opacity:0.5;}#cc_menu_btn:hover{opacity:1}#cc_list .popup_menu_item{white-space:nowrap}</style>\
+		<style>#cc_menu_btn{min-width:59px;padding:0 15px;z-index:999;background-color:#000;opacity:0.5;}#cc_menu_btn:hover{opacity:1}#cc_list .popup_menu_item{white-space:nowrap}</style>\
 		<span class="pulldown" id="cc_menu_btn" onclick="ShowMenu(this, \'cc_menu\', \'left\');">CC'+(curCC ?': <img src="http://cdn.steamcommunity.com/public/images/countryflags/'+curCC.toLowerCase()+'.gif" /> '+curCC:'')+' </span>\
 <div class="popup_block_new" id="cc_menu" style="display:none;">\
 <div class="popup_body popup_menu shadow_content" id="cc_list"></div></div>\
