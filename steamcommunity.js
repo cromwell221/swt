@@ -23,7 +23,7 @@ function init(){
 	else if (/\/gamecards\/\d+/.test(window.location.pathname)){
 		gamecardsPageInit();
 	}
-	else if(window.location.hash == "#pending_gifts) {
+	else if(window.location.hash == "#pending_gifts") {
 		alert('test');
 		pendingGiftInit();
 	}
