@@ -24,6 +24,7 @@ function init(){
 		gamecardsPageInit();
 	}
 	else if(window.location.hash == '#pending_gifts') {
+		console.log('test');
 		pendingGiftInit();
 	}
 }
