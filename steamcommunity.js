@@ -23,8 +23,14 @@ function init(){
 	else if (/\/gamecards\/\d+/.test(window.location.pathname)){
 		gamecardsPageInit();
 	}
+	else if(window.location.hash == '#pending_gifts') {
+		pendingGiftInit();
+	}
 }
 
+function pendingGiftInit(){
+	$('#tabcontent_pendinggifts > .pending_gifts_header:first-child').after('<div class="inventory_links"><a class="btn_darkblue_white_innerfade btn_medium new_trade_offer_btn" href="#" onClick="acceptAllGifts();">Сложить все в инвентарь</a></div>')
+}
 
 function gamecardsPageInit(){
 	var app = window.location.pathname.match(/\/gamecards\/(\d+)/)[1];
