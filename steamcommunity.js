@@ -23,14 +23,27 @@ function init(){
 	else if (/\/gamecards\/\d+/.test(window.location.pathname)){
 		gamecardsPageInit();
 	}
-	else if(window.location.hash == "#pending_gifts") {
-		alert('test');
+	
+	if(window.location.hash == '#pending_gifts') {
 		pendingGiftInit();
 	}
 }
 
 function pendingGiftInit(){
-	$('#tabcontent_pendinggifts > .pending_gifts_header:first-child').after('<div class="inventory_links"><a class="btn_darkblue_white_innerfade btn_medium new_trade_offer_btn" href="#" onClick="acceptAllGifts();">Сложить все в инвентарь</a></div>')
+	$('#tabcontent_pendinggifts > .pending_gifts_header:first-child').after('<div style="margin: 0px 0px 24px"><a class="btn_darkblue_white_innerfade btn_medium" href="#" onClick="acceptAllGifts();"><span>Сложить все в инвентарь</span></a></div>');
+	window.acceptAllGifts = function() {
+		var giftHolderz = $('div[id^=unpacked_gift_]');
+		var gifts = Array();
+		
+		for(var i=0; i<giftHolderz.length; i++)
+		{
+			gifts.push(giftHolderz[i].attributes['id'].value.substring(14));
+		}
+		for(var i=0; i<gifts.length; i++)
+		{
+			DoAcceptGift(gifts[i], false);
+		}	
+	}
 }
 
 function gamecardsPageInit(){
