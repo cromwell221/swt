@@ -3,6 +3,7 @@
 // @include http://steamcommunity.com/id/*
 // @include https://steamcommunity.com/profiles/*
 // @include http://steamcommunity.com/profiles/*
+// @include http://steamcommunity.com/inventory/*
 // ==/UserScript==
 
 
