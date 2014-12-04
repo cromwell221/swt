@@ -5,13 +5,18 @@
 
 (function(){
   
-var langNo, $ = window.jQuery, steamLanguage = document.cookie.match(/(^|\s)Steam_Language=([^;]*)(;|$)/)[2];
+var langNo, $ = window.jQuery, steamLanguage = document.cookie.match(/(^|\s)Steam_Language=([^;]*)(;|$)/);
 // [en,ru,cn][langNo]
-switch(steamLanguage){
-    case 'russian' : langNo = 1; break;
-    case 'schinese' : langNo = 2; break;
-    case 'tchinese' : langNo = 2; break;
-    default : langNo = 0;
+if(!steamLanguage) {
+	langNo = 0;
+}
+else {
+	switch(steamLanguage[2]){
+	    case 'russian' : langNo = 1; break;
+    	case 'schinese' : langNo = 2; break;
+    	case 'tchinese' : langNo = 2; break;
+    	default : langNo = 0;
+	}
 }
 
 function init() {
