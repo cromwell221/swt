@@ -489,50 +489,6 @@ function inventoryPageInit(){
 			$('#market_sell_dialog_ok').on("click", $.proxy(window.SellItemDialog.OnConfirmationAccept, window.SellItemDialog));
 			return res;
 		}
-
-	};
-	
-	window.PopulateScrapAction_old = window.PopulateScrapAction;
-	window.PopulateScrapAction = function( elActions, elScrapAmount, elScrapLink, item ) {
-		var el = elActions.querySelector('#scrapall');
-		if(!el) {
-			elActions.insertAdjacentHTML('beforeend', '<a id="scrapall" href="javascript:GrindAllIntoGoo('+item.app_data.appid+','+item.classid+','+item.contextid+')">Scrap All Of Em</a>');
-		}
-		else {
-			el.setAttribute('href', 'javascript:GrindAllIntoGoo('+item.app_data.appid+','+item.classid+','+item.contextid+')');
-		}
-		return window.PopulateScrapAction_old(elActions, elScrapAmount, elScrapLink, item );
-	};
-
-	window.Grinder = function( appid, contextid, itemid ){
-		var rgAJAXParams = {
-			sessionid: g_sessionID,
-			appid: appid,
-			assetid: itemid,
-			contextid: contextid
-		};
-		var strActionURL = g_strProfileURL + "/ajaxgetgoovalue/";
-
-		$J.get( strActionURL, rgAJAXParams ).done( function( data ) {
-			var $Content = $J(data.strHTML);
-			var strDialogTitle = data.strTitle;
-			strActionURL = g_strProfileURL + "/ajaxgrindintogoo/";
-			rgAJAXParams.goo_value_expected = data.goo_value;
-
-			$J.post( strActionURL, rgAJAXParams).done( function( data ) {
-				ReloadCommunityInventory();
-			}).fail( function() {
-				ShowAlertDialog( strDialogTitle, 'There was an error communicating with the network. Please try again later.' );
-			});
-		});
-	};
-	
-	window.GrindAllIntoGoo = function(appid, classid, contextid){
-		for(var item in g_ActiveInventory.rgInventory) { 
-			if(g_ActiveInventory.rgInventory[item].classid == classid){ 
-				Grinder(appid, contextid, item);
-			}; 
-		};
 	};
 }
 
