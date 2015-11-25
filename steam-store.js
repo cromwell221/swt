@@ -145,7 +145,7 @@ function init() {
 			gamenameEl = document.querySelector('.apphub_AppName');
 		}
 		var gamename = encodeURIComponent(gamenameEl.textContent.trim());
-		el = document.querySelector('#demo_block');
+		el = document.querySelector('#category_block');
 		if(el)
 			el = el.parentElement;
 		else
