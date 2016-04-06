@@ -10,7 +10,7 @@
 // @include	https://store.steampowered.com/*
 // @include	http://steamcommunity.com/*
 // @include	https://steamcommunity.com/*
-// @homepage	http://v1t.su/projects/steam/webtools/
+// @homepage	http://steamcommunity.com/id/rasder33
 // ==/UserScript==
 
 var script = document.createElement('script');
